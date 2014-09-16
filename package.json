@@ -1,0 +1,25 @@
+{
+  "name": "ToolsNools",
+  "version": "0.0.1",
+  "description": "A sample application experimenting with the Nools Business Rules engine.",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "nools",
+    "rules",
+    "tools",
+    "business",
+    "rules"
+  ],
+  "author": "Adron Hall",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "nools": "^0.3.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4",
+    "should": "^4.0.4"
+  }
+}
