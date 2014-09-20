@@ -12,6 +12,13 @@ session.assert (new Message ("hello or goodbye"));
 session.assert (new Message ("hello world"));
 session.assert (new Message ("goodbye"));
 
+/* NOTE: This returns facts in a correlative way. Such as:
+ *
+ * goodbye
+ * hello world goodbye
+ * hello or goodbye
+ * hello goodbye
+ */
 console.log (session.getFacts ());
 
 session.match (function (err) {
@@ -22,5 +29,5 @@ session.match (function (err) {
   }
 })
 
-session.getFacts (Number); //[1, 2];
-session.getFacts (String); //["A", "B"];
+session.getFacts (Number);
+session.getFacts (String);
