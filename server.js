@@ -5,12 +5,15 @@ var session = flow.getSession ();
 
 var Message = flow.getDefined ("message");
 
-console.log ("Rules executed @ " + ruleFilePath);
+//console.log ("Rules executed @ " + ruleFilePath);
 
 session.assert (new Message ("hello"));
 session.assert (new Message ("hello or goodbye"));
 session.assert (new Message ("hello world"));
 session.assert (new Message ("goodbye"));
+
+session.match();
+
 
 /* NOTE: This returns facts in a correlative way. Such as:
  *
@@ -19,15 +22,17 @@ session.assert (new Message ("goodbye"));
  * hello or goodbye
  * hello goodbye
  */
-console.log (session.getFacts ());
+//console.log (session.getFacts ());
 
-session.match (function (err) {
-  if (err) {
-    console.error (err.stack);
-  } else {
-    console.log ("All done finding rules matches!");
-  }
-})
 
-session.getFacts (Number);
-session.getFacts (String);
+
+// session.match (function (err) {
+//   if (err) {
+//     console.error (err.stack);
+//   } else {
+//     console.log ("All done finding rules matches!");
+//   }
+// })
+
+// session.getFacts (Number);
+// session.getFacts (String);
