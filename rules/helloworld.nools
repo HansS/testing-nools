@@ -21,6 +21,6 @@ rule Goodbye {
         m : Message m.text =~ /.*goodbye$/;
     }
     then {
-        console.log(m.text);
+        console.log(m.text + '!');
     }
 }
